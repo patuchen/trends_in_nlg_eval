@@ -1,0 +1,44 @@
+You are an expert in NLP evaluation methodology. Extract structured information
+about the evaluation methods used in this paper excerpt.
+
+Return ONLY a JSON object matching this schema. Omit any field entirely if the
+information is not present in the text — do not use null or empty lists.
+
+{
+  "human_evaluation": {
+    "conducted": true,
+    "methods": ["likert_scale"|"ranking"|"best_worst_scaling"|"binary_classification"|
+                "error_span_annotation"|"free_text"|"pairwise_comparison"|"other"],
+    "scale_points": <integer if likert>,
+    "criteria": ["fluency"|"adequacy"|"coherence"|"grammaticality"|"faithfulness"|
+                 "relevance"|"informativeness"|"naturalness"|"other — specify"],
+    "mt_specific_methods": ["direct_assessment"|"MQM"|"ESA"|"SQM"|"HTER"|"post_editing"|"other"],
+    "annotator_pool": "expert"|"crowdsourced"|"author"|"mixed",
+    "num_annotators": <integer>,
+    "num_items_rated": <integer>,
+    "agreement_reported": true/false,
+    "agreement_metric": "<metric name>",
+    "notes": "<one sentence summary>"
+  },
+  "automatic_evaluation": {
+    "conducted": true,
+    "metrics": ["<metric name>", ...],
+    "notes": "<one sentence summary>"
+  },
+  "llm_as_judge": {
+    "conducted": true,
+    "judge_model": "<model name>",
+    "criteria": ["<criterion>", ...],
+    "notes": "<one sentence summary>"
+  },
+  "languages": {
+    "source_languages": ["<language>", ...],
+    "target_languages": ["<language>", ...],
+    "monolingual": true/false,
+    "language_notes": "<optional note>"
+  },
+  "modalities": {
+    "modality_in": ["text", "speech", "image", "video"],
+    "modality_out": ["text", "speech", "image", "video"]
+  }
+}

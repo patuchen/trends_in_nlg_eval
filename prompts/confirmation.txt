@@ -1,0 +1,32 @@
+You are an expert in NLP evaluation methodology.
+
+Given the following excerpt from a research paper, determine whether each of the
+following evaluation types is genuinely employed or discussed in detail:
+
+1. human_eval: The paper discusses human evaluation (conducting it, proposing methods, 
+                or analyzing results from human evaluation).
+2. auto_eval: The paper discusses automatic metrics (using them, comparing them, 
+              proposing new ones, or analyzing their strengths/weaknesses).
+3. llm_judge: The paper discusses using LLMs as judges (proposing this approach, 
+              implementing it, or analyzing LLM-based evaluation).
+
+Also identify the input and output modalities. Each should be a JSON array containing one or more of:
+- "text" (written natural language)
+- "speech" (audio/spoken language)
+- "image" (visual content)
+- "video" (video/motion)
+
+For example:
+- Text-to-text translation: modality_in: ["text"], modality_out: ["text"]
+- Speech-to-text: modality_in: ["speech"], modality_out: ["text"]
+- Image captioning: modality_in: ["image"], modality_out: ["text"]
+
+Include papers that PROPOSE evaluation methods, DESCRIBE evaluation frameworks, or 
+EMPLOY evaluation on any system/dataset in the paper.
+
+Exclude only: papers that merely CITE evaluation methods without discussion, or 
+papers that mention evaluation only as future work (e.g. "we plan to conduct 
+human evaluation in future work").
+
+Return ONLY a JSON object with no additional text:
+{"human_eval": true/false, "auto_eval": true/false, "llm_judge": true/false, "modality_in": ["text"], "modality_out": ["text"], "reasoning": "one sentence"}

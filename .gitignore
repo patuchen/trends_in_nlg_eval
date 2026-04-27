@@ -1,0 +1,31 @@
+# Runtime / cache
+__pycache__/
+*.pyc
+
+# Outputs and generated artifacts
+output/
+*.log
+pipeline_output.log
+pipeline_full_output.log
+stage1_full.log
+
+# Local data / large text dumps
+txt_papers/
+
+# Ad-hoc test artifacts
+test_*.csv
+test_*.jsonl
+test_*.log
+
+# Timeline/recovery notes created during run incident
+PARALLEL_RESUME_INSTRUCTIONS.md
+PIPELINE_STATUS.md
+QUICK_START.md
+RESUME_GPU2_INSTRUCTIONS.md
+SETUP_COMPLETE.md
+SETUP_INSTRUCTIONS.txt
+VALIDATION_NOTES.md
+implementation_plan.md
+
+# One-off monitoring / tunnel logs
+gpu2_*.log
