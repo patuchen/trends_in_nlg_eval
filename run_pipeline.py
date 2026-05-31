@@ -11,7 +11,6 @@ from datetime import datetime
 # Wire up stages
 from pipeline.filters import load_papers, run_filter
 from pipeline.llm_runner import run_extraction
-from pipeline.haiku_checker import run_spot_checks
 from pipeline.assembler import assemble_outputs
 
 # Configure logging
@@ -27,7 +26,6 @@ def run_pipeline(papers_csv: str = "papers.csv",
                  output_dir: str = "output",
                  api_url: str = "http://localhost:8000/v1",
                  model: str = "Qwen/Qwen2.5-14B-Instruct",
-                 skip_stage_4: bool = False,
                  max_papers: int = None):
     """Run complete pipeline.
     
@@ -37,7 +35,6 @@ def run_pipeline(papers_csv: str = "papers.csv",
         output_dir: Output directory
         api_url: vLLM API URL
         model: Model name
-        skip_stage_4: Skip interactive spot checks
         max_papers: Limit papers processed (for testing)
     """
     
@@ -114,27 +111,6 @@ def run_pipeline(papers_csv: str = "papers.csv",
             raise
     
     # ========================================================================
-    # STAGE 4: Haiku spot checks (interactive)
-    # ========================================================================
-    
-    if not skip_stage_4:
-        stage_start = time.time()
-        logger.info("\n" + "=" * 80)
-        logger.info("STAGE 4: INTERACTIVE HAIKU SPOT CHECKS")
-        logger.info("=" * 80)
-        
-        try:
-            stats = run_spot_checks(str(results_jsonl), sample_fraction=0.03, interactive=True)
-            logger.info(f"Stage 4 completed in {time.time() - stage_start:.1f}s")
-        except Exception as e:
-            logger.error(f"Stage 4 failed: {e}")
-            raise
-    else:
-        logger.info("\n" + "=" * 80)
-        logger.info("STAGE 4: SKIPPED (use --skip-spot-checks to enable)")
-        logger.info("=" * 80)
-    
-    # ========================================================================
     # STAGE 5: Output assembly
     # ========================================================================
     
@@ -162,7 +138,6 @@ def run_pipeline(papers_csv: str = "papers.csv",
     logger.info(f"  - filtered_papers.csv: Stage 1 filter results")
     logger.info(f"  - results.jsonl: Stage 3 LLM extraction (structured)")
     logger.info(f"  - results.csv: Stage 5 flattened results")
-    logger.info(f"  - spot_check_report.txt: Stage 4 corrections (if enabled)")
     logger.info("=" * 80)
 
 
@@ -175,7 +150,6 @@ def main():
 Examples:
   python run_pipeline.py                    # Run full pipeline
   python run_pipeline.py --max-papers 100  # Test on 100 papers
-  python run_pipeline.py --skip-spot-checks # Skip interactive spot checks
   python run_pipeline.py --api-url http://gpu-node:8000/v1  # Custom vLLM server
         """
     )
@@ -206,11 +180,6 @@ Examples:
         help='Model name (default: Qwen/Qwen2.5-14B-Instruct)'
     )
     parser.add_argument(
-        '--skip-spot-checks',
-        action='store_true',
-        help='Skip interactive spot check stage (Stage 4)'
-    )
-    parser.add_argument(
         '--max-papers',
         type=int,
         default=None,
@@ -226,7 +195,6 @@ Examples:
             output_dir=args.output_dir,
             api_url=args.api_url,
             model=args.model,
-            skip_stage_4=args.skip_spot_checks,
             max_papers=args.max_papers
         )
     except Exception as e:

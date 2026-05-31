@@ -29,3 +29,16 @@ implementation_plan.md
 
 # One-off monitoring / tunnel logs
 gpu2_*.log
+
+# Multilingual LLM judge analysis (unrelated to main paper)
+multilingual_judge/
+
+# LaTeX manuscript files (manuscript folder excluded)
+paper_latex/
+
+# Local spreadsheets and plans
+*.xlsx
+*plan.md
+
+
+

@@ -5,3 +5,8 @@ vllm
 transformers
 requests
 aiohttp
+statsmodels
+scipy
+matplotlib
+scikit-learn
+

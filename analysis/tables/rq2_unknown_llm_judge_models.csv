@@ -1,0 +1,65 @@
+llm_judge_model_clean,count,type
+LLM,24,
+LLMs,6,
+not specified,2,
+GPT-eval,2,instruct
+NoDeeLe,1,
+instruction-tuned PLM,1,instruct
+AfroXLMR-114L,1,ML
+multilingual NMT system,1,ML
+LLM3.75,1,
+LLM-as-a-Judge,1,instruct
+DialoguePT,1,
+LLaVA,1,instruct
+<model name>,1,
+medgemma-27b-text-it,1,instruct
+NorBERT,1,ML
+NUBIA,1,ML
+strong LLM,1,
+HateBERT,1,ML
+GPT-judge,1,instruct
+LaBSE,1,ML
+state-of-the-art ensemble,1,
+PA,1,
+LLMjudge,1,instruct
+Prometheus,1,
+perfect LLM,1,
+teacher LLM,1,
+"LLMs (e.g., Gemma-2-9B)",1,
+Evaluator LLMs,1,instruct
+GPT-o4-mini,1,instruct
+DeepSeek Chat v2.5,1,instruct
+DeepSeek-R1,1,instruct
+GPT3,1,
+Levenshtein Transformer (LevT),1,ML
+"G-Eval (Liu et al., 2023)",1,instruct
+discriminative_model,1,
+LLMs or VLMs,1,
+Qwen 2.5,1,instruct
+"DialogGPT, DialogRPT",1,
+OpenAI o4-mini,1,instruct
+transformer neural networks based language models,1,
+trigram Kneser-Ney Language Model,1,
+out-of-the-box neural image retrieval model,1,
+DIM-Bench (LLM-based),1,
+RoBERTa-eval,1,ML
+external verification model,1,
+multiple models,1,
+Transformer language model (Transf. LM),1,
+"Llama-8B, Olmo-7B, Olmo-13B",1,
+DeepMoji,1,
+instruction-following language model,1,
+competitive text LLM,1,
+large language model,1,
+Codex,1,
+RoBERTa,1,ML
+LM-based factuality checker,1,
+neural text classifier,1,
+large language models (LLMs),1,
+EmoLlama-Chat-7B,1,
+"LLM (Bai et al., 2023)",1,
+smaller LMs,1,
+optimizer LLM,1,
+Deita scorer (which utilizes an LLM),1,
+"GPT-o3, Claudesonnet-3.7",1,instruct
+character-aware neural language model (LM),1,

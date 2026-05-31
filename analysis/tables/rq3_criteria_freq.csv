@@ -1,0 +1,15 @@
+criterion,count
+fluency,730
+adequacy,565
+relevance,523
+faithfulness,373
+grammaticality,307
+coherence,294
+accuracy,251
+informativeness,229
+naturalness,192
+overall_quality,175
+readability,68
+consistency,26
+simplicity,24
+meaning_preservation,2

@@ -1,0 +1,128 @@
+﻿=== 1. Validation of LLM Judges ===
+Total papers using instruction-LLM judge: 244
+Number of those explicitly mentioning validation/manual checking: 212 (86.9%)
+Number also reporting human evaluation: 136 (55.7%)
+
+=== 2. Trend of Human Evaluation over time ===
+      sum  count      mean
+year                      
+2010  181    569  0.318102
+2011  162    554  0.292419
+2012  244    638  0.382445
+2013  223    573  0.389180
+2014  237    637  0.372057
+2015  227    568  0.399648
+2016  289    728  0.396978
+2017  228    592  0.385135
+2018  338    925  0.365405
+2019  379   1119  0.338695
+2020  585   1495  0.391304
+2021  609   1521  0.400394
+2022  427   1031  0.414161
+2023  338    743  0.454913
+2024  307    780  0.393590
+2025  278    785  0.354140
+2026   29     64  0.453125
+
+
+=== 3. Categories Regex Overfiring Sample ===
+1. [J19-3004] Three different variants according to the item type are available: ΓÇô DP-HWCM(w) word forms ΓÇô DP-HWCM(c) grammatical categories ΓÇô DP-HWCM(r) grammatical relations ΓÇó DP-Ol(*) Average lexical overlap between items according to their tree level ΓÇó DP-Oc(*) Average lexical overlap between terminal nodes according to their grammatical category ΓÇó DP-Or(*) Average lexical overlap between items according to their grammatical relationship CP-Γêù.
+
+2. [2021.wmt-1.1] The previous instances (Macketanz et al., 2018; Avramidis et al., 2019 Avramidis et al., , 2020) ) use the same underlying collection of sentences and thus allow to observe the overall development of MT systems in clear categories.
+
+3. [W16-2301] As the number of outputs n depends on the number of identical (and, hence, redundant) multisystem outputs in the original data, we end up getting varying numbers of corresponding binary judgments.
+
+4. [2025.acl-long.1002] In MQM, annotators mark error spans with categories and severity levels.
+
+5. [2023.acl-long.69] 1 1 Introduction Natural Language Generation (NLG) refers to an automatic process to generate texts in one or more language categories that satisfy multiple desirable human-like qualities.
+
+6. [2021.wmt-1.57] Two categories of automatic machine translation metrics can be distinguished: (1) string-based metrics and (2) metrics using pretrained models.
+
+7. [2022.tacl-1.47] This includes using the same error categories, severity levels, and error weighting schema.
+
+8. [2025.naacl-long.548] spans, and categorize them based on the annota- tion guideline with six major categories: (1) Ter- minology; (2) Accuracy; (3) Fluency; (4) Style; (5) Locale-convention; and (6) Non-translation.6 Each error is then labeled as major or minor.
+
+9. [2021.tacl-1.87] Thomson and Reiter (2020) designed an error annotation schema based on pre-defined error categories for table-to-text tasks.
+
+10. [2023.acl-long.795] The error types are categorized under two categories Fluency (Flu.) and Accuracy (Acc.).
+
+11. [W13-2201] Given a (non-EMPTY) string from a monolingual edit, we would like to know how often two acceptability judgments by two different reviewers (inter-) or the same reviewer (intra-) agree.
+
+12. [P04-1077] Dark (green) cells are the best correlation numbers in their categories and light gray cells are statistically equivalent to the best numbers in their categories.
+
+13. [2025.acl-long.351] The categories of errors are: accuracy (addition, mistranslation, omission, untranslated text), fluency (character encoding, grammar, inconsistency, punctuation, register, spelling),┬ástyle (awkward), terminology (inappropriate for context, inconsistent use), non-translation, other, or no-error.┬á Each error is classified as one of three categories: critical, major, and minor.
+
+14. [2022.emnlp-main.649] In this paper, we shed light on the behavior of these learned metrics by cre- ating DEMETR, a diagnostic dataset with 31K English examples (translated from 10 source languages) for evaluating the sensitivity of MT evaluation metrics to 35 different linguistic per- turbations spanning semantic, syntactic, and morphological error categories.
+
+15. [2020.acl-main.704] Current approaches largely fall into two categories.
+
+16. [W10-1703] An item is defined to be a rank label in the ranking task, an edited sentence in the editing task, and a yes/no judgment in the judgment task.
+
+17. [2014.amta-researchers.20] In particular, the de-facto automatic evaluation metric for speech recognition is Word Error Rate (WER), which classifies ASR errors into three categories corresponding to Levenshtein distance alignments (i.e.
+
+18. [2024.tacl-1.69] Figure 3: Counts of MQM error categories normalized by the number of annotated instances for each domain: frequent errors differ in the two domains.
+
+19. [2021.wmt-1.59] Because BERTScore can easily be rescaled, it is more useful to verify that good translation pairs receive similar scores across categories; Original: As a result , if the situation keep go on in this unexpected trend , it will cause a bad effect on the young generation.
+
+20. [C12-1014] The errors are divided into four categories: insertion (Ins), substitution (Sub), deletion (Del) and shift.
+
+21. [W12-3102] We note here that this empirical computation is a departure from previous years' analyses, where we had assumed that the three categories are equally likely (yielding P (E) = 1 9 + 1 9 + 1 9 = 1 3 ).
+
+22. [W15-3001] 5 https://github.com/cfedermann/Appraise For example, consider the following annotation provided among outputs A, B, F, H, and J: 1 2 3 4 5 F ΓÇó A ΓÇó B ΓÇó J ΓÇó H ΓÇó As the number of outputs n depends on the number of corresponding multi-system translations in the original data, we get varying numbers of resulting binary judgments.
+
+23. [2010.amta-papers.20] These judgments are traditionally split into two categories: adequacy and fluency.
+
+24. [2023.tacl-1.47] (2022) explore the sensitivity of MT met- rics to errors of different categories (regarding semantics, syntax, and morphology) and sever- ity, using a preference-based setting; they show that recent metrics like BERTScore dramatically outperform lexical overlap-based metrics such as BLEU and ROUGE, mostly obtaining over 95% accuracy in their experiments.
+
+25. [W17-4510] We can classify these signals in three categories.
+
+26. [2023.acl-long.730] 3.3.3 Trained on WMT Data WMT organises an annual shared task on develop- ing MT models for several categories in machine translation (Akhbardeh et al., 2021).
+
+27. [2022.nlppower-1.6] Grouping of top-level metrics Top-level metrics were further grouped into categories based on the task type they are usually applied to: Classification, Computer vision, Natural language processing, Regression, Game playing, Ranking, Clustering and 'Other'.
+
+28. [2024.cl-3.5] Current ap- proaches for long document summarization can be classi∩¼üed into three categories, namely, extractive (Cui and Hu 2021), abstractive (Beltagy, Peters, and Cohan 2020), and hybrid summarization approaches (Pilault et al.
+
+29. [2022.acl-long.441] From our observation, 79.8% of the sampled ma- chine generated stories contained at least one of the errors in the categories, meaning most VIST models are unable to generate perfect stories.
+
+30. [2022.naacl-main.100] We asked the annotators to identify all errors and independently label them with an error category (accuracy, fluency, and style, each with a specific set of subcategories) and a severity level (minor, major, and critical).
+
+31. [2024.cl-2.1] These four subcategories are listed by decreasing degree of granularity and effect on the structure of the rest of the AMR.
+
+32. [2021.emnlp-main.801] To complement purely quantitative measures (review time and string difference of the translation before and after the review), we asked the reviewers to also perform a basic variant of LQA (ΓÇ¥Linguis- tic Quality AssuranceΓÇ¥) based on the MQM-DQF framework.9 The reviewers classi∩¼üed errors into three categories: accuracy (adequacy), ∩¼éuency and other.
+
+33. [W08-0309] We replaced them with yes/no judgments about the acceptability of translations of shorter phrases.
+
+34. [J11-4002] This work focuses on one possible set-up, namely, on five error categories: inflectional errors, errors due to wrong word order, missing words, extra words, and incorrect lexical choices.
+
+35. [W09-0401] For inter-annotator agreement we calculated P (A) for the yes/no judgments by examining all items that were annotated by two or more annotators, and calculating the proportion of time they assigned identical scores to the same items.
+
+36. [2012.amta-wptp.2] Temnikova (2010) enriches a standard error classification (Vilar et al., 2006) for MT by ranking the error categories according to how cognitively costly she expects them to be.
+
+37. [2022.emnlp-main.208] Generally, these metrics fall into two categories, i.e., reference-based and reference-free metrics.
+
+38. [2024.tacl-1.54] Im- proving the modelΓÇÖs ability to differentiate error categories among multiple errors within a sen- tence is an interesting avenue for future research 16This allows us to isolate the effect of the perturbations.
+
+39. [2021.emnlp-main.599] Compression (e.g., summarization) Transduction (e.g., style transfer) Creation (e.g., dialog) Figure 1: Illustration of three categories of NLG tasks in terms of information change.
+
+40. [2020.wmt-1.1] The length of the phrase to be replaced is determined by the number of words in the original translation, as follows: Translation # Words Replaced Length (N) in Translation 1 1 2-5 2 6-8 3 9-15 4 16-20 5 >20 N/4 Annotator Agreement When an analogue scale (or 0-100 point scale, in practice) is employed, agreement cannot be measured using the conventional Kappa coefficient, ordinarily applied to human assessment when judgments are discrete categories or preferences.
+
+41. [2022.naacl-main.259] An instancelevel score is computed by averaging scores over all these categories and the three experts.
+
+42. [2022.acl-long.289] They are asked to provide ratings on a scale of 1 (bad), 2 (slightly bad) to 3 (good) along two dimensions: grammaticality, naturalness, rating on a scale of 0 (less) to 1 (adequate) for informativeness, and binary rating for accuracy.
+
+43. [2022.naacl-main.418] In our paper, we re-evaluate 18 categories of metrics in terms of four dimensions: coherence, consistency, fluency and relevance, as well as a unified human evaluation of various models in dialogue summarization for the first time.
+
+44. [E17-1019] For this dataset, all four different categories are available, having 1000 pairs for each category.
+
+45. [2020.eval4nlp-1.16] 2 Related Work Automatic Summarization Evaluation The automatic evaluation of summarization can be categorized into two categories: untrained automatic metrics, which do not require machine learning but are based on string overlap, or content overlap between machine-generated and expert generated summaries (ground-truth), and machinelearned metrics that are based on machine-learned models (Celikyilmaz et al., 2020).
+
+46. [2025.acl-long.932] 19020  To address the limitations of n-gram-based met- rics, researchers proposed to utilize neural-based metrics, which fall into three categories: encoder- based models like BERTScore (Zhang et al., 2019), which compare text representations; LLM-as-a- judge methods, such as the prompting of Gem- ini (Team et al., 2023) to assess quality without any parameter updates; and neural methods specif- ically trained for evaluating generation such as COMET (Rei et al., 2020), fine-tuned to predict quality scores for machine translation (MT).
+
+47. [2012.eamt-1.55] The source documents are associated with three biomedical categories: general medical documents and public evaluation reports about human or veterinary treatments.
+
+48. [2023.emnlp-main.520] We fo- cus on selected concepts such as profession, ac- tivity, and object within the gender axis, although other categories such as racism also require equal representation.
+
+49. [2017.mtsummit-papers.23] We further break this into two categories: 1.
+
+50. [D19-1409] (Reiter and Belz, 2009) divide existing evaluation meth- ods commonly employed in text generation into three categories: i) evaluations based on task per- formance, ii) human judgments and ratings, where human subjects are recruited to rate different di- mensions of the generated texts, and iii) evalua- tions based on comparison to a reference corpus using automated metrics.
+

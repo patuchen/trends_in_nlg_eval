@@ -1,0 +1,85 @@
+
+--- 2024.emnlp-main.188 ---
+  * d model towards the preference signal. Given the absence of evaluators specifically designed for hallucination and omission in
+  * se selecting hard instances and utilizing GPT-4 to directly evaluate the performance of the models in mitigating these issues.
+  * We ver- ify the rationality of these designed evaluation methods by experiments, followed by exten- sive results
+  * demonstrating the effectiveness of word alignment-based preference optimi
+  * s it is pre-trained to predict the next token in very large-scale raw texts. Specifically in MT, LLM- based translation syste
+  * ieved the high- est accuracy in most language pairs, demonstrating the promise of LLM in MT, but also showing the significance
+  * 6). Figure 1 shows the normalized frequency of the coverage scores predicted by a word aligner. The examples that are annotat
+  * hallucina- tion or omission” tend to have a higher coverage score, while those in “full hallucination or omis- sion” are more
+  * likely to have an extremely low coverage score. “small hallucination or omission” 3223  0.0 0.2 0.4 0.6 0.
+  * 8 1.0 Coverage Score 0.00 0.05 0.10 0.15 0.20 0.25 0.30 Normalized Frequency Hal
+  * rent hallucination degree. 0.0 0.2 0.4 0.6 0.8 1.0 Coverage Score 0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35 Normalized Frequenc
+  * gure 1: A preliminary experiment shows that higher coverage scores correlates to less hallucination and omission. The coverag
+  * e scores are predicted by a word aligner (Wu et al., 2023a). The hu
+  * man annotation of hallucination and omission is from HalOmi bench- mark
+  * hallucination or omission” distribute in the middle. As the annotations are carefully made by humans and highly correlates to t
+
+--- 2023.inlg-main.1 ---
+  * ithfulness of pre-trained neural text generators using both human and automatic evaluation. Moreover, our approach offers a l
+  * ext generators. The relevance of their gen- erations can be evaluated with respect to the cover- age of the input table, i.e. t
+  * cts from the training set. Hence, genera- tions can also be evaluated based on the number of hallucinated facts produced by the
+  * uces text with evenly distributed surprisal, a feature that human readers tend to prefer”. Inspired by this regulariza- tion
+  * ., 2020; Garneau et al., 2021b). Using automatic and manual evaluation, we show that our algorithm improves generalization in a
+  * vations in Section 6. The models, datasets, generations and human evaluations are made publicly available1. 2 Related Work In
+  * algorithm, given a current beam state and a predicted word; score(bi, w) = score(bi−1) + logGen(w)+ X j αj ∗fj(w); ∀w ∈Vsuc (
+  * 1) where score(b) is the score of the current beam state, logGen(w) is the output logit of
+  * the genera- tor, f(∗) are functions that scores word w weighted by αi, and Vsuc is a predefined vocabulary
+  * 17) also proposed to constrain the beam search algorithm operating at the lexical level using a finite-state machine that enfo
+  * he image captioning setting. However, their method does not scale well when the input is composed of sentences, since we don’
+  * hod is designed for open- ended generation and does not yet scale to methods having a constrained output such as data-to-text
+  * inations, mh. These models will thus weigh the current beam score to promote generated sequences with few, or hope- fully no
+  * 0 on a GeForce 2080Ti Nvidia graphic card. To automatically evaluate the architectures, we considered several metrics: mean squ
+  * llucinations, we propose the following weighted beam search score bi; bi = score(bi−1) + log(Gen(wi)) + ϕi (5) where score(bi
+
+--- 2023.inlg-main.30 ---
+  * sed method to preprocess the training data and show through human evaluation that our method significantly reduces hallucinat
+  * ves the overall performance. 1 Introduction The task of generating a summary to accompany a chart is an instance of data-to-te
+  * aining details are provided in Table 11 in the Appendix. We evaluate using BLEU (Post, 2018), ROUGE-2 (Lin, 2004), perplexity,2
+  * and NUBIA (Kane et al., 2020). NU- BIA produces a score based on logical agreement, contradiction, neutrality, and
+  * zation improves almost all metrics. While the overall NUBIA score is lower, its most im- portant elements (logical agreement,
+  * 5-S-OL-NLI 34.2 43.7 7.1 33.1 10.2 56.5 3.5/5 44.5 Table 4: Evaluation results on c2t-small for input format improvements (Sect
+  * eu (Neutrality), Semantic Similarity (SS) and the NUBIA (N) score. Model BL↑ RG-2↑ PPL↓ L↑ C↓ Neu SS↑ N↑ T5 by Kantharaj et a
+  * 5-B-OL-NLI 42.2 50.7 8.2 40.3 15.1 44.5 3.6/5 53.5 Table 5: Evaluation results for comparing linearization methods on c2t-big (
+  * s context BART-NLI premise hypotheses sentence  entailment  scores filtered  summary threshold >0.3 ? Figure 1: Summary clean
+  * an entailment problem and trained to produce an entailment score on a scale of 0-100 (with no specific neutral or contradict
+  * earized data as premise. If the sentence gets an entailment score above the threshold of 0.3, we keep it, oth- erwise we disc
+  * 1/5 3.96/5 p-value 1.5e-5 1.0e-5 0.914 0.333 0.465 Table 6: Human evaluation results (see Section 5.5). We used a χ2 test for
+  * s to c2t-big dataset. 5.4 Finetuning T5 on Filtered Data To evaluate the filtering, we compare two pairs of finetuned T5 models
+  * ained hallucinations (compared to 18 for T5-S-OL).  418 5.5 Human Evaluation We conduct a detailed human evaluation, compar-
+  * e Section 4.1) and T5-S-OL-NLI (trained in Section 5.4). We evaluate the follow- ing: (1) Value Correctness (VC): Numbers/value
+
+--- 2023.emnlp-main.1007 ---
+  * of abstrac- tive summarization models. Through exten- sive human evaluation, we show that paramet- ric knowledge stored in s
+  * several recommendations to the research community on how to evaluate and improve the temporal generalization capability of text
+  * igned a slew of executive orders this week aimed at accel- erating the distribution of vaccines and tests ... Generated Summar
+  * on their parametric world knowledge. In order to reli- ably evaluate the temporal generalization ability of pre-trained summari
+  * zation models, the source articles in an evaluation benchmark should contain knowledge conflicts, i.e., the
+  * are published after 2019 and contain knowledge conflicts to evaluate the ro- bustness of pre-trained summarization on articles
+  * od. Based on our benchmark, we present the first systematic human evaluation of the temporal gen- eralization ability of text
+  * re recent faithfulness enhancement methods and faithfulness evaluation methods effective on future data? We first analyze the p
+  * ation in future CNN news articles. Then, we investigate the human correlations of two popular faithfulness evaluation metrics
+  * how that both of these metrics have a weak correlation with human judgments. Taken together, it is essential to use temporall
+  * cinations containing outdated knowl- edge. Therefore, a new evaluation protocol is re- quired to estimate the extent to which P
+  * 2021). However, the test sets of the above datasets do not evaluate the temporal generalization capability of summa- rization
+  * models. A realistic evaluation benchmark should include data from different temporal pe
+  * riods to ensure an accurate evaluation. As most of the ex- isting PLMs are pre-trained on corpo
+  * to examine the temporal generalization ability of PLMs. 2.2 Evaluation of Faithfulness and Factuality There are several dataset
+
+--- 2023.emnlp-main.770 ---
+  * nation Mitigation in Natural Language Generation from Large-Scale Open-Domain Knowledge Graphs Xiao Shi, Zhengyuan Zhu, Zeyu
+  * n.zhu,zeyu.zhang}@mavs.uta.edu, cli@uta.edu Abstract In generating natural language descriptions for knowledge graph triples,
+  * prior works used ei- ther small-scale, human-annotated datasets or datasets with limited variety of graph shapes
+  * aving mostly star graphs. Graph- to-text models trained and evaluated on such datasets are largely not assessed for more re- al
+  * istic large-scale, open-domain settings. We introduce a new dataset, GraphNar
+  * -to-text generation task entails, given a subgraph G⊂G, generating a token sequence (y1, ..., yn) to describe G. This task can
+  * he textual narration of graph frag- ments is important. Generating high-quality text can be particularly challenging for large
+  * -scale and open-domain knowledge graphs. Specifi- cally, benchmark
+  * ., 2021). Existing graph- to-text models, being trained and evaluated on these datasets, are largely not validated for more rea
+  * lis- tic large-scale, open-domain settings. Section 2 presents this analysis in
+  * ties and relationships described in the sentence. The large-scale of both Wikipedia and Freebase, the 12506  linguistic varia
+  * ltering out training instances when the ROUGE-1 (Lin, 2004) scores between the input and the output fall below a certain thre
+  * s et al., 2020) and T5 (Raffel et al., 2020). The automatic evaluation results consistently demonstrated that models performed
+  * he approach led to the increment of 12 and 7 points in BLEU score (Papineni et al., 2002) for GraphNarrative and TEKGEN, resp
+  * te-of-the-art results on the WebNLG benchmark. Furthermore, human evaluation results showed that sentence trimming on average

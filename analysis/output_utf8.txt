@@ -1,0 +1,336 @@
+﻿Loading data...
+Dropped 41 non-English venue papers. Remaining: 16,482
+has_auto_eval override applied: 4307 papers flipped to True
+has_human_eval override applied: 1797 papers flipped to True
+Merged 7,809 rescued papers. Total corpus: 24,291
+Analysis corpus: 24,291 papers  (1952-2025)
+  with human eval  : 9,136
+  with auto eval   : 21,808
+  with LLM judge   : 380  (instruction: 355, ml: 25)
+
+Keyword detection pass (methods + criteria) over 9,136 HE papers ...
+  full text: 9,136  |  llm fallback: 0  |  missing: 0
+
+======================================================================
+RQ1: Prevalence and trajectory of human evaluation
+======================================================================
+Papers with human eval: 9,136 / 24,291 (37.6%)
+Logistic regression skipped: No module named 'statsmodels'
+
+Human eval rate 2018-2025:
+      n_he  total      rate
+year                       
+2018   560   1403  0.399145
+2019   583   1629  0.357888
+2020   870   2153  0.404087
+2021   890   2207  0.403262
+2022   629   1557  0.403982
+2023   522   1170  0.446154
+2024   603   1371  0.439825
+2025   685   1661  0.412402
+
+Human eval rate: main conf+journals+SIGGEN vs ALL venues (2018-2025):
+      main_conf_rate  main_conf_n  all_rate  all_n
+year                                              
+2018        0.419003          642  0.399145   1403
+2019        0.329491         1041  0.357888   1629
+2020        0.389513          801  0.404087   2153
+2021        0.404800         1250  0.403262   2207
+2022        0.405133         1091  0.403982   1557
+2023        0.446154         1170  0.446154   1170
+2024        0.439825         1371  0.439825   1371
+2025        0.412402         1661  0.412402   1661
+
+Human eval rate by language group:
+                  n_he  total      rate
+lang_group                             
+english_only       587    930  0.631183
+non_english_mono   211    435  0.485057
+multilingual      1356   4285  0.316453
+
+Human eval rate by language group (excluding MT papers):
+                  n_he  total      rate
+lang_group                             
+english_only       473    682  0.693548
+multilingual       168    286  0.587413
+non_english_mono   117    214  0.546729
+
+======================================================================
+RQ2: LLM-as-a-judge adoption
+======================================================================
+has_llm_judge=True   : 380
+  instruction_llm    : 355
+  ml_evaluator       : 25
+  auto-unknown type  : 252  (curation set)
+    assumed instruct : 235
+    manual ML        : 17
+
+Unknown LLM-judge models (regex type=unknown):
+  papers: 252
+  papers with non-empty model string: 94
+  unique model strings: 64
+llm_judge_model_clean
+LLM                                                  24
+LLMs                                                  6
+not specified                                         2
+GPT-eval                                              2
+NoDeeLe                                               1
+instruction-tuned PLM                                 1
+AfroXLMR-114L                                         1
+multilingual NMT system                               1
+LLM3.75                                               1
+LLM-as-a-Judge                                        1
+DialoguePT                                            1
+LLaVA                                                 1
+<model name>                                          1
+medgemma-27b-text-it                                  1
+NorBERT                                               1
+NUBIA                                                 1
+strong LLM                                            1
+HateBERT                                              1
+GPT-judge                                             1
+LaBSE                                                 1
+state-of-the-art ensemble                             1
+PA                                                    1
+LLMjudge                                              1
+Prometheus                                            1
+perfect LLM                                           1
+teacher LLM                                           1
+LLMs (e.g., Gemma-2-9B)                               1
+Evaluator LLMs                                        1
+GPT-o4-mini                                           1
+DeepSeek Chat v2.5                                    1
+DeepSeek-R1                                           1
+GPT3                                                  1
+Levenshtein Transformer (LevT)                        1
+G-Eval (Liu et al., 2023)                             1
+discriminative_model                                  1
+LLMs or VLMs                                          1
+Qwen 2.5                                              1
+DialogGPT, DialogRPT                                  1
+OpenAI o4-mini                                        1
+transformer neural networks based language models     1
+trigram Kneser-Ney Language Model                     1
+out-of-the-box neural image retrieval model           1
+DIM-Bench (LLM-based)                                 1
+RoBERTa-eval                                          1
+external verification model                           1
+multiple models                                       1
+Transformer language model (Transf. LM)               1
+Llama-8B, Olmo-7B, Olmo-13B                           1
+DeepMoji                                              1
+instruction-following language model                  1
+competitive text LLM                                  1
+large language model                                  1
+Codex                                                 1
+RoBERTa                                               1
+LM-based factuality checker                           1
+neural text classifier                                1
+large language models (LLMs)                          1
+EmoLlama-Chat-7B                                      1
+LLM (Bai et al., 2023)                                1
+smaller LMs                                           1
+optimizer LLM                                         1
+Deita scorer (which utilizes an LLM)                  1
+GPT-o3, Claudesonnet-3.7                              1
+character-aware neural language model (LM)            1
+
+LLM-judge + human eval co-occurrence over time:
+ year  n_llm  pct_also_human  pct_auto_only
+ 2022    3.0        0.000000     100.000000
+ 2023   19.0       73.684211      26.315789
+ 2024  109.0       69.724771      27.522936
+ 2025  224.0       62.500000      35.714286
+
+======================================================================
+RQ3: Human evaluation criteria
+======================================================================
+Criteria prevalence across 9,136 HE papers (keyword-based):
+  accuracy                 : 4,839  (53.0%)
+  consistency              : 2,094  (22.9%)
+  fluency                  : 2,064  (22.6%)
+  relevance                : 2,002  (21.9%)
+  coherence                : 1,528  (16.7%)
+  correctness              : 1,397  (15.3%)
+  simplicity               : 1,020  (11.2%)
+  faithfulness             :   973  (10.7%)
+  grammaticality           :   923  (10.1%)
+  adequacy                 :   906  (9.9%)
+  overall_quality          :   849  (9.3%)
+  readability              :   831  (9.1%)
+  informativeness          :   790  (8.6%)
+  naturalness              :   439  (4.8%)
+  appropriateness          :   364  (4.0%)
+  understandability        :   262  (2.9%)
+  meaning_preservation     :   227  (2.5%)
+  engagingness             :   140  (1.5%)
+  humanlikeness            :    77  (0.8%)
+
+Faithfulness (keyword) mentions by year (2015+):
+year
+2015    0.020
+2016    0.026
+2017    0.040
+2018    0.038
+2019    0.039
+2020    0.076
+2021    0.145
+2022    0.169
+2023    0.261
+2024    0.264
+2025    0.299
+
+Criteria per HE paper: mean=2.38 median=2.0 max=16
+
+======================================================================
+RQ4: Evaluation modality mix
+======================================================================
+Evaluation modality distribution:
+eval_modality
+auto_only              13834
+human_and_auto          7634
+human_only              1272
+none_reported           1196
+llm_judge_and_human      230
+llm_judge_and_auto       118
+llm_judge_only             7
+
+RQ4: Simplified modality profile by venue group (%):
+eval_type4   human_only  both_human_auto  auto_only  llm_judge_no_human  none
+venue_group                                                                  
+core_nlp            2.9             34.6       59.3                 1.0   2.1
+generation         10.8             44.3       33.8                 0.4  10.6
+journals            5.0             41.9       49.2                 0.0   3.9
+other               7.5             28.9       56.0                 0.0   7.6
+
+RQ4: % papers with no reported evaluation signal by 5-year period (selected early periods):
+period
+1950    42.9
+1955    83.3
+1960    50.0
+1965    46.2
+1970    60.0
+1975     4.5
+1980    38.5
+
+======================================================================
+RQ5: Task-based differences
+======================================================================
+Evaluation profile by task:
+                     total  n_he   he_rate  n_auto  auto_rate  n_llmj
+task                                                                 
+question_generation    316   178  0.563291     298   0.943038      10
+summarization         2093   961  0.459150    1937   0.925466      41
+dialogue              1572   694  0.441476    1393   0.886132      28
+general_nlg           1361   592  0.434974    1188   0.872888      37
+paraphrase            1059   455  0.429651     911   0.860246      16
+captioning             271   115  0.424354     262   0.966790       5
+data_to_text           347   132  0.380403     312   0.899135       9
+machine_translation  12182  3539  0.290511   10795   0.886143      56
+
+MT vs non-MT human eval rate (recent years):
+is_mt  False  True 
+year               
+2015   0.438  0.426
+2016   0.516  0.374
+2017   0.495  0.340
+2018   0.517  0.323
+2019   0.436  0.300
+2020   0.506  0.326
+2021   0.514  0.297
+2022   0.472  0.317
+2023   0.515  0.338
+2024   0.454  0.415
+2025   0.413  0.412
+
+======================================================================
+RQ6: Multilingual and non-English evaluation
+======================================================================
+Evaluation profile by language group:
+                     n   he_rate  auto_rate  llmj_rate
+lang_group                                            
+english_only       930  0.631183   0.941935   0.008602
+non_english_mono   435  0.485057   0.882759   0.006897
+multilingual      4285  0.316453   0.965461   0.006534
+
+Top tasks in multilingual papers (%):
+task
+machine_translation    87.9
+summarization           2.9
+general_nlg             2.6
+paraphrase              2.4
+dialogue                1.3
+data_to_text            0.6
+simplification          0.6
+captioning              0.6
+
+Multilingual HE rate: MT vs non-MT:
+        sum  count      mean
+is_mt                       
+False   300    550  0.545455
+True   1188   3999  0.297074
+
+======================================================================
+RQ7: Annotation methodology types
+======================================================================
+Papers reporting annotator count : 1,293 / 9,136 (14.2%)
+Papers reporting item count      : 1,429 / 9,136 (15.6%)
+Papers reporting IAA             : 531 / 9,136 (5.8%)
+(Counts not reported -- LLM extraction recall too low for quantitative claims)
+
+Annotation method prevalence across HE papers (keyword-based):
+  categories               : 3,740  (40.9%)
+  likert                   : 1,681  (18.4%)
+  post_editing             : 1,403  (15.4%)
+  pairwise                 : 1,012  (11.1%)
+  ranking                  :   501  (5.5%)
+  span                     :   381  (4.2%)
+  direct_assessment        :   207  (2.3%)
+  best_worst_scaling       :    67  (0.7%)
+
+Methods per HE paper: mean=0.98 (confirms multiple methods per paper are captured)
+
+MT post-editing trend (3-year-rolled average rates):
+  2015: 42.9%
+  2025: 16.8%
+  2014-2016 mean: 42.7%
+  2023-2025 mean: 22.3%
+
+IAA reporting rate by 5-year period (HE papers only):
+        n_agr  total      rate
+period                        
+1950    False      1       0.0
+1965        1      3  0.333333
+1970    False      1       0.0
+1975        0      4       0.0
+1980        0     26       0.0
+1985        0     32       0.0
+1990        0     48       0.0
+1995        4    118  0.033898
+2000       25    296  0.084459
+2005       70    665  0.105263
+2010      112   1447  0.077402
+2015      128   2295  0.055773
+2020      179   3514  0.050939
+2025       12    685  0.017518
+
+======================================================================
+NOTABLE FINDINGS SUMMARY
+======================================================================
+HE rate: 2021=40.3%  2024=44.0%  (drop: -3.7 pp)
+Agreement ever reported: 5.8% of HE papers
+
+English-only HE rate: 63.1%
+Multilingual HE rate: 31.6%
+Multilingual papers that are MT: 87.9%
+
+Figures -> figures/   Tables -> tables/
+
+======================================================================
+Recall Check on Human Eval of Hallucinations
+======================================================================
+Total annotations in sheet: 60
+Total annotations mapped to corpus: 51
+Old Recall (before override): 49.0% (25/51)
+New Recall (after override):  90.2% (46/51)
+Improvement: +41.2 pp
